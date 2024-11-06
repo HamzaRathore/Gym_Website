@@ -184,7 +184,7 @@
     /* margin-top: 13px; */
   }
 
-  
+/*   
 .mid-container {
   position: relative;
   text-align: center;
@@ -194,6 +194,7 @@
 @keyframes mid-container{
   0%{background-image: url('');}
 } */ 
+
 .mid-container img {
   /* background-image:url(images/g_back3.jpg); */
   background-size: cover;
@@ -206,7 +207,7 @@
 }
 .first {
   position: absolute;
-  top: 74px;
+  top: 154px;
   left: 90px;
   
 }
@@ -215,7 +216,7 @@
 }
 .sec {
   position: absolute;
-  top: 120px;
+  top: 200px;
   left: 120px;
 }
 .sec h1 {
@@ -228,15 +229,20 @@
 }
 .thrd {
   position: absolute;
-  top: 220px;
-  left: 250px;
+  top: 300px;
+  left: 300px;
 }
 .thrd h1 {
   color: rgb(211, 211, 110);
+} 
+.container-2 {
+  
+  margin-top: 120px;
 }
 .container2 {
   display: flex;
   justify-content: space-around;
+  margin-top: 30px;
 }
 .box {
   /* border: 2px solid black; */
@@ -385,6 +391,7 @@
   margin: auto;
   font-size: 130%;
 }
+
 #container_3{
     display: flex;
     margin: 4px 4px;
@@ -425,7 +432,7 @@
     transform: scale(0.9);
 }
 .heading_1{
-
+     
     display: flex;
     justify-content: center;
     margin: 20px 0px;
@@ -564,11 +571,7 @@ align-items: center;
 margin: 4px 0x;
 
 } 
-/* .cover_end{
-    height: 80vh;
-    width: 50%;
-    border: 2px solid black;
-} */
+
 table,th,tr,td
 {
     
@@ -904,19 +907,7 @@ h3 {
   transform: scale(0);
   transition: 0.2s;
 } 
-/* .btn-prot-shop{
-  background-color: #4CAF50; 
-  color: white; 
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
-  border: none; 
-  outline: none;
-  border-radius: 5px; 
-}
-.btn-prot-shop {
-  background-color: #45a049; /* Optional: Change the background color on hover */
-  .btn-mem-prot-2{
+ .btn-mem-prot-2{
     background-color: white;
     color: black; 
     padding: 2px 20px;
@@ -929,6 +920,12 @@ h3 {
     cursor: pointer;
     margin-bottom: 10px;
     box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5); 
+  }
+  .btn-mem-prot-2:hover{
+    background-color: #555;
+    color: white;
+    box-shadow: 2px 2px 2px gray;
+    transition-duration: 2000;
   }
  .protein_head{
      
@@ -945,82 +942,50 @@ h3 {
   
  }
 
- .container2.blur {
-  filter: blur(5px); /* Apply blur effect */
-  pointer-events: none; /* Prevent interaction with blurred content */
-}
+ #container{
+  height: 100px;
+  width: 100px;
+  border: 1px solid black;
+ }
 
-.form-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
-  z-index: 1000;
-}
-
-.form-overlay .form {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-}
-
-.close-btn {
-  margin-top: 10px;
-  padding: 8px 12px;
-  background-color: #f44336;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.form {
-  display: flex;
-  flex-direction: column;
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #f9f9f9;
-  border-radius: 8px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.form h2 {
-  margin-bottom: 15px;
-  text-align: center;
-}
-
-.form label {
-  margin-bottom: 10px;
-  font-weight: bold;
-}
-
-.form input,
-.form textarea {
-  width: 100%;
-  padding: 8px;
-  margin-top: 5px;
-  margin-bottom: 15px;
-  border-radius: 4px;
-  border: 1px solid #ccc;
-}
-
-.form button {
-  background-color: #4CAF50;
-  color: white;
-  padding: 10px;
-  border: none;
-  border-radius: 4px;
+ .cart-icon {
+  position: absolute;
+  right: 120px;
+  top: 120px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  /* z-index: 1000; */
+  font-size: 24px;
+  color: #333; /* Change color as per design */
 }
-
-.form button:hover {
-  background-color: #45a049;
+.cart-count {
+  background: red;
+  color: white;
+  border-radius: 50%;
+  padding: 0px 5px;
+  margin:0px 5px;
+ 
+  
+}
+.cart-dropdown {
+  display: none;
+  background-color: rgb(250, 247, 247);
+  border: 1px solid #ddd;
+  padding: 10px;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 200px;
+}
+.cart-icon:hover .cart-dropdown {
+  display: block;
+}
+.cart-ul{
+  list-style-type: decimal-leading-zero;
+  padding-left: 18px;
+}
+.ul-p{
+  font-size: 16px;
+}
+#membership{
+  margin-top: 12px;
 }
