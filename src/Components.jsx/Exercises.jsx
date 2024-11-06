@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import '../styles.css';
 import bic from '../assets/biceps/1_b.avif';
 import bic1 from '../assets/biceps/2_b.avif';
@@ -46,10 +46,18 @@ import leg_2 from '../assets/leg_2.avif';
 import leg_3 from '../assets/leg_3.avif';
 import leg_4 from '../assets/leg_4.avif';
 
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 
 
 export default function Exercises() {
+    useEffect(()=>{
+        AOS.init({
+          duration:1000,
+          
+        });
+      },[])
 
    
     const[level,setLevel]=useState('Beginner');
@@ -71,9 +79,9 @@ export default function Exercises() {
         </select>
       </div>
       {level==='Beginner' && (
-        <div>
-    <h1 className='exer_head'>Biceps</h1>
-      <div className="exer_con">
+        <div >
+    <h1 className='exer_head' >Biceps</h1>
+      <div className="exer_con "data-aos="fade-left" data-aos-delay="200">
             <div className="box-exer">
             <img src={bic} className="bic_img"/>
             <h3>Standing Barbell Curl</h3>
@@ -126,7 +134,7 @@ export default function Exercises() {
         </div>
 
         <h1 className='exer_head'>Triceps</h1>
-      <div className="exer_con">
+      <div className="exer_con"  data-aos="fade-right" data-aos-delay="200">
             <div className="box-exer">
             <img src={tri_1} className="bic_img"/>
             <h3>Cable Rope Pushdown</h3>
@@ -179,8 +187,8 @@ export default function Exercises() {
         </div>
         
 
-        <h1 className='exer_head'>Chest</h1>
-      <div className="exer_con">
+        <h1 className='exer_head' >Chest</h1>
+      <div className="exer_con" data-aos="fade-left" data-aos-delay="200">
             <div className="box-exer">
             <img src={chest_1} className="bic_img"/>
             <h3>Weighted Svend Press</h3>
@@ -233,8 +241,8 @@ export default function Exercises() {
         </div>
 
 
-        <h1 className='exer_head'>Shoulders</h1>
-      <div className="exer_con">
+        <h1 className='exer_head' >Shoulders</h1>
+      <div className="exer_con" data-aos="fade-right" data-aos-delay="200">
             <div className="box-exer">
             <img src={shoulder_1} className="bic_img"/>
             <h3>Cable Lateral Fly</h3>
@@ -287,8 +295,8 @@ export default function Exercises() {
         </div>
       
 
-        <h1 className='exer_head'>Legs</h1>
-      <div className="exer_con">
+        <h1 className='exer_head' >Legs</h1>
+      <div className="exer_con" data-aos="fade-left" data-aos-delay="200">
             <div className="box-exer">
             <img src={leg_1} className="bic_img"/>
             <h3>Squats</h3>
@@ -344,8 +352,8 @@ export default function Exercises() {
 
         {level==='Intermediate' && (
         <div>
-    <h1 className='exer_head'>Biceps</h1>
-      <div className="exer_con">
+    <h1 className='exer_head' >Biceps</h1>
+      <div className="exer_con" data-aos="fade-left" data-aos-delay="200">
       <div className="box-exer">
             <img src={bic} className="bic_img"/>
             <h3>Standing Barbell Curl</h3>
@@ -445,8 +453,8 @@ export default function Exercises() {
             
         </div>
 
-        <h1 className='exer_head'>Triceps</h1>
-      <div className="exer_con">
+        <h1 className='exer_head' >Triceps</h1>
+      <div className="exer_con" data-aos="fade-right" data-aos-delay="200">
       <div className="box-exer">
             <img src={tri_1} className="bic_img"/>
             <h3>Cable Rope Pushdown</h3>
@@ -548,8 +556,8 @@ export default function Exercises() {
         </div>
         
 
-        <h1 className='exer_head'>Chest</h1>
-      <div className="exer_con">
+        <h1 className='exer_head' >Chest</h1>
+      <div className="exer_con" data-aos="fade-left" data-aos-delay="200">
       <div className="box-exer">
             <img src={chest_1} className="bic_img"/>
             <h3>Weighted Svend Press</h3>
@@ -651,8 +659,8 @@ export default function Exercises() {
         </div>
 
 
-        <h1 className='exer_head'>Shoulders</h1>
-      <div className="exer_con">
+        <h1 className='exer_head' >Shoulders</h1>
+      <div className="exer_con" data-aos="fade-right" data-aos-delay="200">
             <div className="box-exer">
             <img src={shoulder_1} className="bic_img"/>
             <h3>Cable Lateral Fly</h3>
@@ -754,8 +762,8 @@ export default function Exercises() {
         </div>
       
 
-        <h1 className='exer_head'>Legs</h1>
-      <div className="exer_con">
+        <h1 className='exer_head' >Legs</h1>
+      <div className="exer_con" data-aos="fade-left" data-aos-delay="200">
             <div className="box-exer">
             <img src={leg_1} className="bic_img"/>
             <h3>Squats</h3>
@@ -813,8 +821,8 @@ export default function Exercises() {
         
 {level==='Advanced' && (
         <div>
-    <h1 className='exer_head'>Biceps</h1>
-      <div className="exer_con">
+    <h1 className='exer_head' >Biceps</h1>
+      <div className="exer_con" data-aos="fade-left" data-aos-delay="200">
       <div className="box-exer">
             <img src={bic} className="bic_img"/>
             <h3>Standing Barbell Curl</h3>
@@ -915,8 +923,8 @@ export default function Exercises() {
             
         </div>
 
-        <h1 className='exer_head'>Triceps</h1>
-      <div className="exer_con">
+        <h1 className='exer_head' >Triceps</h1>
+      <div className="exer_con" data-aos="fade-right" data-aos-delay="200">
       <div className="box-exer">
             <img src={tri_1} className="bic_img"/>
             <h3>Cable Rope Pushdown</h3>
@@ -1017,8 +1025,8 @@ export default function Exercises() {
         </div>
         
 
-        <h1 className='exer_head'>Chest</h1>
-      <div className="exer_con">
+        <h1 className='exer_head' >Chest</h1>
+      <div className="exer_con" data-aos="fade-left" data-aos-delay="200">
       <div className="box-exer">
             <img src={chest_1} className="bic_img"/>
             <h3>Weighted Svend Press</h3>
@@ -1117,7 +1125,7 @@ export default function Exercises() {
 
 
         <h1 className='exer_head'>Shoulders</h1>
-      <div className="exer_con">
+      <div className="exer_con" data-aos="fade-right" data-aos-delay="200">
             <div className="box-exer">
             <img src={shoulder_1} className="bic_img"/>
             <h3>Cable Lateral Fly</h3>
@@ -1211,7 +1219,7 @@ export default function Exercises() {
         </div>
       
 
-        <h1 className='exer_head'>Legs</h1>
+        <h1 className='exer_head' data-aos="fade-left" data-aos-delay="200">Legs</h1>
       <div className="exer_con">
             <div className="box-exer">
             <img src={leg_1} className="bic_img"/>
